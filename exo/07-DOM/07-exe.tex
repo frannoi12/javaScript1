@@ -1,0 +1,45 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\lhead{IFNTI Sokodé -- L3}
+\rhead{Javascript - Document Object Model}
+\cfoot{Institut de Formation aux Normes et Technologies de l'Informatique\\300 BP 40, Sokodé TOGO -- Tél. : +228 90 91 81 41}
+\rfoot{\thepage}
+
+\title{JavaScript\\DOM Exercice\footnote{Fortement inspiré de \url{https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web/}}}
+\author{IFNTI Sokodé -- L3}
+\date{28 Avril 2021}
+
+%https://www.pierre-giraud.com/javascript-apprendre-coder-cours/
+%https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript/6278392-declarez-des-variables-et-modifiez-leurs-valeurs
+\begin{document}
+Récupérer le code sur Moodle.
+
+Modifier le JavaScript pour récupérer :
+\begin{itemize}
+	\item l'élément ayant pour ID ``main-content" grâce à son ID
+	\item l'élément ayant pour classe ``important" 
+	\item les éléments ayant pour type ``article"
+	\item du premier élément :
+	\begin{itemize}
+		\item de type li
+		\item qui sont dans une liste ul 
+		\begin{itemize}
+			\item ayant la classe ``important"
+			\item qui est incluse dans un ``article"
+		\end{itemize}				
+	\end{itemize}
+	\item à partir de la réponse précédente : récupérez l'élément li suivant de la liste ul
+\end{itemize}
+\end{document}

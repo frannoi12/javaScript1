@@ -1,0 +1,69 @@
+1) Première fonction:
+
+Il affiche une alert contenant la valeur 12.
+
+cette fonction est une fonction anonyme immédiatemment appelée donc elle à accès à la variable a car elle est déclaré globalement.
+
+
+2) Deuxième fonction:
+
+
+L'exécution de ce code affiche dans la boîte de diallogue de notre navigateur 12 de la valeur interne de a définit à l'intérieur de la fonction.
+
+
+Ceci se passe car globalement on avait défint une variable a avec une valeur de 5 tandis que à l'intérieur de la fonction on à rédefinit a donc la fonction tiens compte uniquement de la nouvelle valeur de la vaible a redéfinit.
+
+Si on changait le nom de la variable a définit dans la fonction 
+par b par exemple alors la fonction alert allait affiché la valeur de a définit globalement, c'est-à-dire 5.
+
+
+
+3) Troisième fonction:
+
+
+Lorsque nous exécutons ce code, une boîte de dialogue d'alerte s'affiche avec le nombre 12, car la fonction anonyme interne, accessible via x(), a accès à sa propre variable a grâce à la closure. 
+
+La variable a déclarée à l'extérieur de la fonction anonyme 
+immédiatemment appelée avec la valeur 10 n'est pas affectée 
+et n'est pas accessible à l'intérieur de la fonction interne.
+
+
+La raison pour laquelle la fonction interne affiche la valeur 12 plutôt que 10 est liée à la portée des variables et aux closures.
+Je viens à dire donc que la fonction anonyme à immédiatement accès à la variable au quel elle peut avoir accès immédiatement .
+
+
+4) Quatrième fonction:
+
+Lorsque nous exécutons ce code, une boîte de diallogue d'alerte 
+s'affiche avec la valeur 10 car la variable a utilisée dans l'instruction alert(a) fait référence à la variable déclarée à l'extérieur de la fonction interne.
+
+
+Elle affiche cela car la variable a qui est définit dans la fonction au quel alert devrait avoir accès est déclaré dans une sous fonction de la fonction principal et la fonction alert qui doit afficher la a est définit dans une sous fonction de la fonction principal donc elle ne peut avoir accès qu'à la variable a définit globalement.
+
+
+
+5) Cinquième fonction:
+
+Lorsque nous exécutons x(), nous appelons la fonction anonyme
+interne qui a été assignée à x.
+
+À l'intérieur de cette fonction, nous utilisons l'instruction 
+alert(a) pour afficher la valeur de a. Comme la valeur de a a été modifiée à l'intérieur de la fonction anonyme immédiatement appelée,la valeur affichée sera 12.
+
+Donc, lorsque nous exécutons ce code, une boîte de dialogue 
+d'alerte s'affiche avec la valeur 12, car la fonction anonyme interne, accessible via x(), a accès à la variable a modifiée dans l'IIFE grâce à la closure.
+
+
+
+6)Sixième fonction:
+
+Lorsque nous exécutons x(), nous appelons la fonction x qui a été définie à l'intérieur de l'IIFE.
+
+À l'intérieur de cette fonction, nous utilisons l'instruction alert(a) pour afficher la valeur de a.
+Comme la fonction x a accès à sa portée englobante, elle recherche d'abord une variable a à l'intérieur de sa propre portée locale,mais elle ne la trouve pas.
+
+Ensuite, la fonction x recherche dans les portées englobantes. 
+Elle trouve une variable a dans la portée englobante de l'IIFE où elle a été déclarée avec la valeur 15.
+
+Donc, lorsque nous exécutons ce code, une boîte de dialogue d'alerte s'affiche avec la valeur 15, car la fonction x, accessible via x(),a accès à la variable a définie à l'intérieur de l'IIFE grâce à la closure.
+La variable a déclarée à l'extérieur de l'IIFE avec la valeur 10 n'est pas affectée et n'est pas accessible à l'intérieur de la fonction x.

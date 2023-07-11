@@ -92,9 +92,9 @@ document.getElementById("p1").innerHTML = chaine.match(masque7);*/
 //1
 
 // Récupérer la chaîne de texte à partir du h1
-let texteH1 = document.querySelector("h5").innerText;
+// let texteH1 = document.querySelector("h5").innerText;
 
-let masque0 = /^\s+|\s+$/g;
+// let masque0 = /^\s+|\s+$/g;
 // Supprimer les espaces blancs de début et de fin en utilisant une regex
 // let texteNettoye = texteH1.replace('');
 
@@ -151,7 +151,7 @@ let masque0 = /^\s+|\s+$/g;
 
 
 
-let chaine = "Bonjour, je suis Pierre et mon nom. est le [06-36-65-65-65]";
+// let chaine = "Bonjour, je suis Pierre et mon nom. est le [06-36-65-65-65]";
 
 
 // let masque1 = /e(?=r)/g;
@@ -160,4 +160,57 @@ let chaine = "Bonjour, je suis Pierre et mon nom. est le [06-36-65-65-65]";
 // let masque4 = /(?<!i)s/g;
 
 
-document.getElementById("p1").innerHTML= chaine.match(masque4);
+//document.getElementById("p1").innerHTML= chaine.match(masque4);
+
+
+
+// function verifierAdresseEmail(adresseEmail) {
+//     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(adresseEmail);
+// }
+
+// let mailRecup = document.getElementById("emailInput");
+
+// let mailRecuperer = mailRecup.value;
+
+// let result = verifierAdresseEmail(mailRecuprer);
+
+// if (result) {
+//     document.getElementById("p4").innerHTML= "Adresse email est valide";
+// } else {
+//     document.getElementById("p4").innerHTML="Adresse email n'est pas valide"
+// }
+
+// function verifierAdresseEmail(adresseEmail) {
+//     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(adresseEmail);
+//   }
+  
+//   let mailRecup = document.getElementById("emailInput");
+  
+//   mailRecup.addEventListener("keyup", function(event) {
+//     // Vérifier si la touche "Entrée" a été pressée (code 13)
+//     if (event.key === "Enter") {
+//       event.preventDefault(); // Empêche le rechargement de la page
+  
+//       let mailRecuperer = mailRecup.value;
+//       let result = verifierAdresseEmail(mailRecuperer);
+//       let texte = document.getElementById("p4");
+  
+//       if (result) {
+//         //console.log("c'est ok");
+//         texte.textContent = "Adresse e-mail valide";
+//       } else {
+//         //console.log("nn pas bn");
+//         texte.textContent = "Adresse e-mail invalide";
+//       }
+//     }
+//   });
+  
+
+
+let texteH1 = document.querySelector("h5").innerText;
+let leSplit = texteH1.split(",");
+console.log(leSplit);
+
+document.getElementById("p1").textContent = leSplit.join(", ");
